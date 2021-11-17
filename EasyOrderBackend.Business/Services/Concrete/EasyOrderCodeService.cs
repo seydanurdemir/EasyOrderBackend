@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EasyOrderBackend.Business.Services.Concrete
 {
-    class EasyOrderCodeService : IEasyOrderCodeService
+    public class EasyOrderCodeService : IEasyOrderCodeService
     {
     }
 }

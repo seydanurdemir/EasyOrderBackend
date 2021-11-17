@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyOrderBackend.Business.Services.Abstract
 {
-    interface IEasyOrderCodeService
+    public interface IEasyOrderCodeService
     {
     }
 }
