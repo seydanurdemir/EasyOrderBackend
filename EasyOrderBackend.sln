@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyOrderBackend.Business",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyOrderBackend.DataAccess", "EasyOrderBackend.DataAccess\EasyOrderBackend.DataAccess.csproj", "{59DB1DA2-9962-4531-9B3E-04EF8BCE1221}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyOrderBackend.Entities", "EasyOrderBackend.Entities\EasyOrderBackend.Entities.csproj", "{37668BF4-07CF-41DB-82B7-918E494A62D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{59DB1DA2-9962-4531-9B3E-04EF8BCE1221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59DB1DA2-9962-4531-9B3E-04EF8BCE1221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59DB1DA2-9962-4531-9B3E-04EF8BCE1221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37668BF4-07CF-41DB-82B7-918E494A62D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37668BF4-07CF-41DB-82B7-918E494A62D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37668BF4-07CF-41DB-82B7-918E494A62D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37668BF4-07CF-41DB-82B7-918E494A62D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
