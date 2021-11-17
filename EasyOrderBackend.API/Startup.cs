@@ -30,7 +30,7 @@ namespace EasyOrderBackend.API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EasyOrderBackend.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EasyOrderBackend.API", Version = "v1.0.0" });
             });
         }
 
