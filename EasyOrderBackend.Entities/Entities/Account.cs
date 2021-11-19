@@ -15,6 +15,7 @@ namespace EasyOrderBackend.Entities.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        //Unique
         [StringLength(64, MinimumLength = 8)]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
@@ -31,6 +32,7 @@ namespace EasyOrderBackend.Entities.Entities
         [DataType(DataType.Text)]
         public string Surname { get; set; }
 
+        //Unique
         [StringLength(10, MinimumLength = 10, ErrorMessage = "Maximum 10, Minimum 10 Characters")]
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
