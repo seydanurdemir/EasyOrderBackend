@@ -19,6 +19,7 @@ namespace EasyOrderBackend.Entities.Entities
         [DataType(DataType.Text)]
         public string Title { get; set; }
 
+        //Unique
         [StringLength(60, MinimumLength = 1, ErrorMessage = "Maximum 60, Minimum 1 Characters")]
         [DataType(DataType.CreditCard)]
         public string CardNumber { get; set; }
