@@ -15,15 +15,12 @@ namespace EasyOrderBackend.Entities.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [StringLength(32, MinimumLength = 3, ErrorMessage = "Maximum 32, Minimum 3 Characters")]
-        [DataType(DataType.Text)]
-        public string Title { get; set; }
-
+        //Unique
         public Guid GuidCode { get; set; }
 
         [StringLength(256, MinimumLength = 3, ErrorMessage = "Maximum 256, Minimum 3 Characters")]
         [DataType(DataType.Url)]
-        public string Url { get; set; }
+        public string Source { get; set; }
 
         [StringLength(32, MinimumLength = 1, ErrorMessage = "Maximum 32, Minimum 1 Characters")]
         [DataType(DataType.Currency)]
