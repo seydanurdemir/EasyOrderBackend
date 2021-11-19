@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EasyOrderBackend.Entities.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,15 @@ namespace EasyOrderBackend.DataAccess.Context
         {
             base.OnConfiguring(optionsBuilder);
 
-            //string connectionString = @"Data Source=localhost\SQLEXPRESS;Database=EasyOrderDb;Integrated Security=True";
-            //optionsBuilder.UseSqlServer(connectionString);
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Database=EasyOrderDb;Integrated Security=True";
+            optionsBuilder.UseSqlServer(connectionString);
         }
+
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Card> Cards { get; set; }
+        public DbSet<Code> Codes { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
