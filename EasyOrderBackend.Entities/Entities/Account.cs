@@ -15,12 +15,9 @@ namespace EasyOrderBackend.Entities.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [StringLength(32, MinimumLength = 3, ErrorMessage = "Maximum 32, Minimum 3 Characters")]
-        [DataType(DataType.Text)]
-        public string Title { get; set; }
-
-        [StringLength(32, MinimumLength = 8, ErrorMessage = "Maximum 32, Minimum 8 Characters")]
-        public string Username { get; set; }
+        [StringLength(64, MinimumLength = 8)]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
 
         [StringLength(32, MinimumLength = 8, ErrorMessage = "Maximum 32, Minimum 8 Characters")]
         [DataType(DataType.Password)]
@@ -38,9 +35,8 @@ namespace EasyOrderBackend.Entities.Entities
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 
-        [StringLength(64, MinimumLength = 8)]
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
+        [DataType(DataType.ImageUrl)]
+        public string Image { get; set; }
 
         [DefaultValue(true)]
         public bool IsRecordValid { get; set; }
