@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EasyOrderBackend.DataAccess.Migrations
 {
     [DbContext(typeof(EasyOrderDbContext))]
-    [Migration("20211119205829_CreateTables")]
+    [Migration("20211119214506_CreateTables")]
     partial class CreateTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(64)");
 
                     b.Property<DateTime>("InsertDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("InsertUserId")
@@ -62,6 +63,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<DateTime>("UpdateDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UpdateUserId")
@@ -92,6 +94,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("InsertDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("InsertUserId")
@@ -121,6 +124,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<DateTime>("UpdateDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UpdateUserId")
@@ -154,6 +158,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(8)");
 
                     b.Property<DateTime>("InsertDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("InsertUserId")
@@ -167,6 +172,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<DateTime>("UpdateDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UpdateUserId")
@@ -200,6 +206,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("InsertDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("InsertUserId")
@@ -213,6 +220,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<DateTime>("UpdateDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UpdateUserId")
@@ -235,6 +243,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(11)");
 
                     b.Property<DateTime>("InsertDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("InsertUserId")
@@ -260,6 +269,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<DateTime>("UpdateDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UpdateUserId")
@@ -282,6 +292,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<string>("DateAndTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasMaxLength(36)
                         .HasColumnType("nvarchar(36)");
 
@@ -289,6 +300,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("InsertDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("InsertUserId")
@@ -302,6 +314,7 @@ namespace EasyOrderBackend.DataAccess.Migrations
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<DateTime>("UpdateDateTime")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<int>("UpdateUserId")

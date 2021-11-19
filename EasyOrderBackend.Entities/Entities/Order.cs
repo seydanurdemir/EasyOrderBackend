@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace EasyOrderBackend.Entities.Entities
 {
+    [Table("Orders")]
     public class Order
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -29,18 +31,22 @@ namespace EasyOrderBackend.Entities.Entities
 
         [StringLength(36, MinimumLength = 18, ErrorMessage = "Maximum 36, Minimum 18 Characters")]
         [DataType(DataType.DateTime)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string DateAndTime { get; set; }
 
+        [DefaultValue(true)]
         public bool IsRecordValid { get; set; }
 
         public int InsertUserId { get; set; }
 
         [DataType(DataType.DateTime)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime InsertDateTime { get; set; }
 
         public int UpdateUserId { get; set; }
 
         [DataType(DataType.DateTime)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdateDateTime { get; set; }
     }
 }

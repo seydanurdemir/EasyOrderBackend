@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace EasyOrderBackend.Entities.Entities
 {
+    [Table("Accounts")]
     public class Account
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -40,16 +42,19 @@ namespace EasyOrderBackend.Entities.Entities
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [DefaultValue(true)]
         public bool IsRecordValid { get; set; }
 
         public int InsertUserId { get; set; }
 
         [DataType(DataType.DateTime)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime InsertDateTime { get; set; }
 
         public int UpdateUserId { get; set; }
 
         [DataType(DataType.DateTime)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdateDateTime { get; set; }
     }
 }
